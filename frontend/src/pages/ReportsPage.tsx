@@ -1,7 +1,6 @@
 import { useEffect, useState } from "react";
 import { reportsApi } from "../api/client";
-import { format, subDays } from "date-fns";
-import { tr } from "date-fns/locale";
+import { format } from "date-fns";
 import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer } from "recharts";
 
 export default function ReportsPage() {

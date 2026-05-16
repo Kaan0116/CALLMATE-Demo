@@ -30,7 +30,7 @@ let _demoInterval: ReturnType<typeof setInterval> | null = null;
 export default function CallPage() {
   const [phoneNumber, setPhoneNumber] = useState("");
   const [loading, setLoading] = useState(false);
-  const { activeCall, transcripts, emotions, coaching, isRecording, setActiveCall, clearCall, setRecording, addTranscript, addEmotion, addCoaching } = useCallStore();
+  const { activeCall, transcripts, emotions, coaching, setActiveCall, clearCall, setRecording, addTranscript, addEmotion, addCoaching } = useCallStore();
   const { sendAudioChunk } = useCallWebSocket(activeCall?.call_id ?? null);
 
   const _startDemoStream = () => {
